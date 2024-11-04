@@ -1,101 +1,50 @@
-import Image from "next/image";
+'use client'
+import React, { useState } from "react";
+import { HowDoesItWorkTabs } from "@/components/HowDoesItWorkTabs";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const [selectedItem, setSelectedItem] = useState<null|number>(null)
+
+  return (
+    <div>
+      
+      <div className="pb-5 flex flex-col-reverse lg:flex-row pt-10 lg:pt-0 justify-start lg:justify-center items-center min-h-screen w-full bg-[#111]">
+        <div className="w-full lg:w-2/5 h-full flex flex-col justify-center items-start pl-5 md:pl-32 pr-5 lg:pr-0">
+          <div className="font-bold text-[#eee] text-5xl sm:text-7xl">Your Game,</div>
+          {/* <div className="font-bold text-[#eee] text-5xl sm:text-7xl">Game,</div> */}
+          <div className="font-bold text-[#eee] text-5xl sm:text-7xl">your Wager</div>
+          <div className="h-10" />
+          <div className="text-[#ddd] text-xl">Implement transparent and provable web3 bets in your multiplayer videogames. Without knowing blockchain development.</div>
+          <div className="h-10" />
+          <div className="flex gap-5  flex-wrap">
+            <button type="button" className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 rounded-lg text-sm sm:text-base font-semibold px-5 py-2.5 text-center me-2 mb-2">Getting started</button>
+            <button type="button" className="text-white focus:ring-4 focus:outline-none focus:ring-transparent dark:focus:ring-transparent text-sm sm:text-base">developer docs</button>
+            {/* <button type="button" className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 rounded-lg text-sm sm:text-lg font-semibold px-5 py-2.5 text-center me-2 mb-2">developer docs</button> */}
+            {/* <button type="button" className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 rounded-lg text-lg font-semibold px-5 py-2.5 text-center me-2 mb-2">Purple to Blue</button> */}
+            {/* <button type="button" className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-lg text-lg font-semibold px-5 py-2.5 text-center me-2 mb-2">Cyan to Blue</button> */}
+            {/* <button type="button" className="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-lg text-lg font-semibold px-5 py-2.5 text-center me-2 mb-2">Purple to Pink</button> */}
+            {/* <button type="button" className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-lg font-semibold px-5 py-2.5 text-center me-2 mb-2">Teal to Lime</button> */}
+            {/* <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 rounded-lg text-lg font-semibold px-5 py-2.5 text-center me-2 mb-2">Red to Yellow</button> */}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="w-3/5 h-full">
+          <div className="flex justify-center items-center h-full">
+            <div className="w-52 h-52 bg-gray-500 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+
+      <div className="min-h-screen bg-[#eee]">
+        <div className=" pt-20 pl-3 lg:pl-20 pr-3 font-bold text-[#444] text-3xl sm:text-5xl">how does it works?</div>
+        <div className="pl-3 lg:pl-20 pr-3 pt-5 text-[#555] text-xl w-full md:w-3/5 ">
+          The main idea of Bet3 it's to abstract the major part of the logic needed to implement web3 transactions in your game.
+          You simply have to configure and create a new bet, then call the provided functionalities as it's needed. 
+        </div>
+        <HowDoesItWorkTabs />
+
+      </div>
+
     </div>
   );
 }
