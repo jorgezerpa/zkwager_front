@@ -42,7 +42,7 @@ export function HowDoesItWorkTabs() {
   }
 
   return (
-      <div className="bg-gradient-to-br from-purple-700 to-purple-950 pt-1">
+      <div className="bg-gradient-to-br from-purple-800 to-purple-950 pt-1 max-w-screen-xl mx-auto">
         <div className="relative mx-auto my-14 flex gap-10 w-full justify-center items-center px-3 max-w-[500px]">
           <div className="absolute left-2" onClick={()=>setSelectedItem(selectedItem>0 ? selectedItem-1 : selectedItem)}>
             <MdArrowBackIos />

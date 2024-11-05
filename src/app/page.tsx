@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { HowDoesItWorkTabs } from "@/components/HowDoesItWorkTabs";
 
+import { FaGithub } from "react-icons/fa";
+
 export default function Home() {
 
   const [showMobileMenu, setShowMobileMenu] = useState(false)
@@ -82,7 +84,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <h1 className="text-balance text-5xl font-semibold  text-gray-300 sm:text-7xl">Web3 bets for your videogames</h1>
-              <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">Implement transparent and provable web3 wagers in your games, with no need to write your own smart contracts</p>
+              <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">Implement transparent and provable blockchain wagers in your games, with no need to write your own smart contracts</p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a href="#" className="rounded-md bg-purple-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
                 <a href="#" className="text-sm/6 font-semibold text-gray-300">Developer docs <span aria-hidden="true">→</span></a>
@@ -102,8 +104,10 @@ export default function Home() {
       <section className="bg-gray-900">
         <div className="py-8 px-4 mx-auto lg:py-16 lg:px-6">
             <div className=" sm:text-lg text-gray-400">
-                <h2 className="mb-4 text-5xl  font-bold text-white">How does it works?</h2>
-                <p className="mb-4 font-light max-w-screen-md">The idea of Bet3 it to work as an SCaaS (Smart Contract as a Service) so you can take your game and just "plug-in" the betting functionalities that you need. Here is a quick fly of the basic implementation flow:</p>
+                <h2 className="mb-4 text-5xl  font-bold text-white max-w-screen-xl mx-auto">How does it works?</h2>
+                <div className="max-w-screen-xl mx-auto">
+                  <p className="mb-4 font-light max-w-screen-md text-gray-200">The idea of Bet3 it to work as a SCaaS (Smart Contract as a Service) so you can take your game and just "plug-in" the betting functionalities that you need. Here is a quick fly of the basic implementation flow:</p>
+                </div>
                 <HowDoesItWorkTabs />
             </div>
         </div>
@@ -112,59 +116,123 @@ export default function Home() {
 
 
 
-      <section className="bg-white dark:bg-gray-900">
+      <section className="bg-gray-900">
         <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div className="mb-8 lg:mb-16">
-                <h2 className="mb-4 text-5xl  font-bold text-black text-center">Features</h2>
-                <p className="mb-4 mx-auto font-light max-w-screen-md text-center">The idea of Bet3 it to work as an SCaaS (Smart Contract as a Service) so you can take your game and just "plug-in" the betting functionalities that you need. Here is a quick fly of the basic implementation flow:</p>
+                <h2 className="mb-4 text-5xl  font-bold text-white text-center">Features</h2>
+                {/* <p className="mb-4 mx-auto font-light max-w-screen-md text-center">The idea of Bet3 it to work as an SCaaS (Smart Contract as a Service) so you can take your game and just "plug-in" the betting functionalities that you need. Here is a quick fly of the basic implementation flow:</p> */}
             </div>
             <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                 <div>
-                    <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                    {/* <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 className="mb-2 text-xl font-bold dark:text-white">Allow multiple types of digital assets</h3>
-                    <p className="text-gray-500 dark:text-gray-400">You can bet criptocurrencies like STRK or ETH, NFTs and custom tokens from the game's economy</p>
+                    </div> */}
+                    <h3 className="mb-2 text-xl font-bold text-white">Allow multiple types of digital assets</h3>
+                    <p className="text-gray-400">You can bet criptocurrencies like STRK or ETH. Also NFTs and custom tokens created for game's economy.</p>
                 </div>
                 <div>
-                    <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
-                    </div>
-                    <h3 className="mb-2 text-xl font-bold dark:text-white">Legal</h3>
-                    <p className="text-gray-500 dark:text-gray-400">Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.</p>
+                    {/* <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <svg className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path></svg>                    
+                    </div> */}
+                    <h3 className="mb-2 text-xl font-bold text-white">Multiple winners and custom prizes distribution</h3>
+                    <p className="text-gray-400">You can set the number of winners of a bet, and assign the percentage of the prizes each one will take.</p>
                 </div>
                 <div>
-                    <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path></svg>                    
-                    </div>
-                    <h3 className="mb-2 text-xl font-bold dark:text-white">Business Automation</h3>
-                    <p className="text-gray-500 dark:text-gray-400">Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.</p>
+                    {/* <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <svg className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path></svg>
+                    </div> */}
+                    <h3 className="mb-2 text-xl font-bold text-white">Can be used everywhere!</h3>
+                    <p className="text-gray-400">Just like an API. Since we provided just the contracts, you can implement them in any platform (Web, PCs, mobile...) and any game engine you want using any library that allows web3 interaction.</p>
                 </div>
                 <div>
-                    <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 className="mb-2 text-xl font-bold dark:text-white">Finance</h3>
-                    <p className="text-gray-500 dark:text-gray-400">Audit-proof software built for critical financial operations like month-end close and quarterly budgeting.</p>
+                    {/* <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <svg className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
+                    </div> */}
+                    <h3 className="mb-2 text-xl font-bold text-white">Register not just the winners, but any other game data that verifies bet validity</h3>
+                    <p className=" text-gray-400">You can make multiple calls in real time to the contracts, to prove any game-related parameters. For example register the number of coins recolected, number of kills, number of matches won, survival time, etc. And finally use such counts to assign the winners.</p>
                 </div>
                 <div>
-                    <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
-                    </div>
-                    <h3 className="mb-2 text-xl font-bold dark:text-white">Enterprise Design</h3>
-                    <p className="text-gray-500 dark:text-gray-400">Craft beautiful, delightful experiences for both marketing and product with real cross-company collaboration.</p>
-                </div>
-                <div>
-                    <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                    {/* <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 className="mb-2 text-xl font-bold dark:text-white">Operations</h3>
-                    <p className="text-gray-500 dark:text-gray-400">Keep your company’s lights on with customizable, iterative, and structured workflows built for all efficient teams and individual.</p>
+                    </div> */}
+                    <h3 className="mb-2 text-xl font-bold text-white">Tournaments mode</h3>
+                    <p className="text-gray-400">Aside of players bettings with their own money, you can make use of the validity and provability of our contracts to organize competitions where you, as the house, provide prizes to the winners.</p>
                 </div>
             </div>
         </div>
       </section>
 
+
+      <section className="bg-gray-900">
+        <div className="py-8 px-4 mx-auto lg:py-16 lg:px-6">
+            <div className=" sm:text-lg text-gray-400">
+                <h2 className="mb-4 text-5xl  font-bold text-white max-w-screen-xl mx-auto">Learn with examples</h2>
+                <div className="max-w-screen-xl mx-auto">
+                  <p className="mb-4 font-light max-w-screen-md text-gray-200">Aside developer docs, we have a couple of real life (or "real game") examples you can test and follow along their implementation:</p>
+                </div>
+                <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-screen-xl mx-auto">
+                    <div>
+                      <div className="relative w-full h-52 border-gray-300 border-2 rounded-md overflow-hidden">
+                        <img src={"/images/tic-tac-toe.png"} style={{ objectFit:"cover", width:"100%", height:"100%" }} />
+                      </div>
+                      <div >
+                        <div className="text-gray-200 font-bold">Tic tac toe</div>
+                        <div className="text-gray-300 text-sm">We introduce Bet3 power with one of the simpler games in the world.</div>
+                      </div>
+                    </div>
+                    <div className="lg:col-span-2">
+                      <div className="relative w-full h-52 bg-gray-300 border-gray-300 border-2 rounded-md overflow-hidden">
+                        <img src={"/images/tic-tac-toe-multi.png"} style={{ objectFit:"cover", width:"100%", height:"100%" }} />
+                      </div>
+                      <div >
+                        <div className="text-gray-200 font-bold">Tic tac toe (Best of 3)</div>
+                        <div className="text-gray-300 text-sm">Now we implement the basics of counter contract to set the winner in function of more games won.</div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="relative w-full h-52 bg-gray-300 border-gray-300 border-2 rounded-md overflow-hidden">
+                        <img src={"/images/coins-collection-platformer.png"} style={{ objectFit:"cover", width:"100%", height:"100%" }} />
+                      </div>
+                      <div >
+                        <div className="text-gray-200 font-bold">Platformer coins collection</div>
+                        <div className="text-gray-300 text-sm">here we'll see the real power of Starknet with a high number of contract calls (1 coin taken, one contract call to register it).</div>
+                      </div>
+                    </div>
+                    <div className="lg:col-span-2">
+                      <div className="relative w-full h-52 bg-gray-300 border-gray-300 border-2 rounded-md overflow-hidden">
+                        <img src={"/images/race-game.png"} style={{ objectFit:"cover", width:"100%", height:"100%" }} />
+                      </div>
+                      <div >
+                        <div className="text-gray-200 font-bold">Race game with multiple winners</div>
+                        <div className="text-gray-300 text-sm">We will learn how to share the prizes in games with multiple winners, and how to set the percentage each one takes.</div>
+                      </div>
+                    </div>
+                    <div className="lg:col-span-2">
+                      <div className="relative w-full h-52 bg-gray-300 border-gray-300 border-2 rounded-md overflow-hidden">
+                        <img src={"/images/items-collection.png"} style={{ objectFit:"cover", width:"100%", height:"100%" }} />
+                      </div>
+                      <div >
+                        <div className="text-gray-200 font-bold">Object collection 2.0</div>
+                        <div className="text-gray-300 text-sm">We can create multiple counters for each object type, and assing a certain weight of each counter on the end result calculation.</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+
+      <section className="bg-gray-900">
+        <div className="flex justify-center items-center h-screen">
+          <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+              <div className="mx-auto max-w-screen-sm text-center">
+                  <h2 className="mb-4 text-4xl font-bold text-white">Want to contribute?</h2>
+                  <FaGithub color="white" className="mx-auto" size={30} />
+                  <a href="#" className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Check or Github</a>
+              </div>
+          </div>
+        </div>
+      </section>
 
 
 
