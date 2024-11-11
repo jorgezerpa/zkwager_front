@@ -80,7 +80,7 @@ export default function Home() {
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-300 ring-1 ring-gray-100 hover:ring-gray-100">
-                We're an open source project. You can <a href="https://github.com/jorgezerpa/zkwager" target="_blank" className="font-semibold text-purple-500"><span className="absolute inset-0" aria-hidden="true"></span>Contribute here<span aria-hidden="true">&rarr;</span></a>
+                We&apos;re an open source project. You can <a href="https://github.com/jorgezerpa/zkwager" target="_blank" className="font-semibold text-purple-500"><span className="absolute inset-0" aria-hidden="true"></span>Contribute here<span aria-hidden="true">&rarr;</span></a>
               </div>
             </div>
             <div className="text-center">
@@ -107,7 +107,7 @@ export default function Home() {
             <div className=" sm:text-lg text-gray-400">
                 <h2 className="mb-4 text-5xl  font-bold text-white max-w-screen-xl mx-auto">How does it works?</h2>
                 <div className="max-w-screen-xl mx-auto">
-                  <p className="mb-4 font-light max-w-screen-md text-gray-200">The idea of ZKwager it to work as a SCaaS (Smart Contract as a Service) so you can take your game and just "plug-in" the betting functionalities that you need. Here is a quick fly of the basic implementation flow:</p>
+                  <p className="mb-4 font-light max-w-screen-md text-gray-200">The idea of ZKwager it to work as a SCaaS (Smart Contract as a Service) so you can take your game and just &quot;plug-in&quot; the betting functionalities that you need. Here is a quick fly of the basic implementation flow:</p>
                 </div>
                 <HowDoesItWorkTabs />
             </div>
@@ -129,7 +129,7 @@ export default function Home() {
                         <svg className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
                     </div> */}
                     <h3 className="mb-2 text-xl font-bold text-white">Allow multiple types of digital assets</h3>
-                    <p className="text-gray-400">You can bet criptocurrencies like STRK or ETH. Also NFTs and custom tokens created for game's economy.</p>
+                    <p className="text-gray-400">You can bet criptocurrencies like STRK or ETH. Also NFTs and custom tokens created for game&apos;s economy.</p>
                 </div>
                 <div>
                     {/* <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
@@ -169,7 +169,7 @@ export default function Home() {
             <div className=" sm:text-lg text-gray-400">
                 <h2 className="mb-4 text-5xl  font-bold text-white max-w-screen-xl mx-auto">Learn with examples</h2>
                 <div className="max-w-screen-xl mx-auto">
-                  <p className="mb-4 font-light max-w-screen-md text-gray-200">Aside developer docs, we have a couple of real life (or "real game") examples you can test and follow along their implementation:</p>
+                  <p className="mb-4 font-light max-w-screen-md text-gray-200">Aside developer docs, we have a couple of real life (or &quot;real game&quot;) examples you can test and follow along their implementation:</p>
                 </div>
                 <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-screen-xl mx-auto">
                     <div className="hover:scale-95 transition-all" onClick={()=>setShowUnderConstruction(true)}>
@@ -196,7 +196,7 @@ export default function Home() {
                       </div>
                       <div >
                         <div className="text-gray-200 font-bold">Platformer coins collection</div>
-                        <div className="text-gray-300 text-sm">here we'll see the real power of Starknet with a high number of contract calls (1 coin taken, one contract call to register it).</div>
+                        <div className="text-gray-300 text-sm">here we&apos;ll see the real power of Starknet with a high number of contract calls (1 coin taken, one contract call to register it).</div>
                       </div>
                     </div>
                     <div className="lg:col-span-2 hover:scale-95 transition-all" onClick={()=>setShowUnderConstruction(true)}>
