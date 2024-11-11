@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa";
 export default function Home() {
 
   const [showMobileMenu, setShowMobileMenu] = useState(false)
+  const [showUnderConstruction, setShowUnderConstruction] = useState(false)
 
   return (
     <div>
@@ -15,8 +16,8 @@ export default function Home() {
           <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <img className="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                <span className="sr-only">ZKWager</span>
+                <div className="text-white font-bold text-xl sm:text-3xl">ZKwager</div>
               </a>
             </div>
             <div className="flex lg:hidden">
@@ -79,7 +80,7 @@ export default function Home() {
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-300 ring-1 ring-gray-100 hover:ring-gray-100">
-                We're an open source project. You can <a href="#" className="font-semibold text-purple-500"><span className="absolute inset-0" aria-hidden="true"></span>Contribute here<span aria-hidden="true">&rarr;</span></a>
+                We're an open source project. You can <a href="https://github.com/jorgezerpa/zkwager" target="_blank" className="font-semibold text-purple-500"><span className="absolute inset-0" aria-hidden="true"></span>Contribute here<span aria-hidden="true">&rarr;</span></a>
               </div>
             </div>
             <div className="text-center">
@@ -106,7 +107,7 @@ export default function Home() {
             <div className=" sm:text-lg text-gray-400">
                 <h2 className="mb-4 text-5xl  font-bold text-white max-w-screen-xl mx-auto">How does it works?</h2>
                 <div className="max-w-screen-xl mx-auto">
-                  <p className="mb-4 font-light max-w-screen-md text-gray-200">The idea of Bet3 it to work as a SCaaS (Smart Contract as a Service) so you can take your game and just "plug-in" the betting functionalities that you need. Here is a quick fly of the basic implementation flow:</p>
+                  <p className="mb-4 font-light max-w-screen-md text-gray-200">The idea of ZKwager it to work as a SCaaS (Smart Contract as a Service) so you can take your game and just "plug-in" the betting functionalities that you need. Here is a quick fly of the basic implementation flow:</p>
                 </div>
                 <HowDoesItWorkTabs />
             </div>
@@ -120,7 +121,7 @@ export default function Home() {
         <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div className="mb-8 lg:mb-16">
                 <h2 className="mb-4 text-5xl  font-bold text-white text-center">Features</h2>
-                {/* <p className="mb-4 mx-auto font-light max-w-screen-md text-center">The idea of Bet3 it to work as an SCaaS (Smart Contract as a Service) so you can take your game and just "plug-in" the betting functionalities that you need. Here is a quick fly of the basic implementation flow:</p> */}
+                {/* <p className="mb-4 mx-auto font-light max-w-screen-md text-center">The idea of ZKwager it to work as an SCaaS (Smart Contract as a Service) so you can take your game and just "plug-in" the betting functionalities that you need. Here is a quick fly of the basic implementation flow:</p> */}
             </div>
             <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                 <div>
@@ -171,16 +172,16 @@ export default function Home() {
                   <p className="mb-4 font-light max-w-screen-md text-gray-200">Aside developer docs, we have a couple of real life (or "real game") examples you can test and follow along their implementation:</p>
                 </div>
                 <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-screen-xl mx-auto">
-                    <div>
+                    <div className="hover:scale-95 transition-all" onClick={()=>setShowUnderConstruction(true)}>
                       <div className="relative w-full h-52 border-gray-300 border-2 rounded-md overflow-hidden">
                         <img src={"/images/tic-tac-toe.png"} style={{ objectFit:"cover", width:"100%", height:"100%" }} />
                       </div>
                       <div >
                         <div className="text-gray-200 font-bold">Tic tac toe</div>
-                        <div className="text-gray-300 text-sm">We introduce Bet3 power with one of the simpler games in the world.</div>
+                        <div className="text-gray-300 text-sm">We introduce ZKwager power with one of the simpler games in the world.</div>
                       </div>
                     </div>
-                    <div className="lg:col-span-2">
+                    <div className="lg:col-span-2 hover:scale-95 transition-all" onClick={()=>setShowUnderConstruction(true)}>
                       <div className="relative w-full h-52 bg-gray-300 border-gray-300 border-2 rounded-md overflow-hidden">
                         <img src={"/images/tic-tac-toe-multi.png"} style={{ objectFit:"cover", width:"100%", height:"100%" }} />
                       </div>
@@ -189,7 +190,7 @@ export default function Home() {
                         <div className="text-gray-300 text-sm">Now we implement the basics of counter contract to set the winner in function of more games won.</div>
                       </div>
                     </div>
-                    <div>
+                    <div className="hover:scale-95 transition-all" onClick={()=>setShowUnderConstruction(true)}>
                       <div className="relative w-full h-52 bg-gray-300 border-gray-300 border-2 rounded-md overflow-hidden">
                         <img src={"/images/coins-collection-platformer.png"} style={{ objectFit:"cover", width:"100%", height:"100%" }} />
                       </div>
@@ -198,7 +199,7 @@ export default function Home() {
                         <div className="text-gray-300 text-sm">here we'll see the real power of Starknet with a high number of contract calls (1 coin taken, one contract call to register it).</div>
                       </div>
                     </div>
-                    <div className="lg:col-span-2">
+                    <div className="lg:col-span-2 hover:scale-95 transition-all" onClick={()=>setShowUnderConstruction(true)}>
                       <div className="relative w-full h-52 bg-gray-300 border-gray-300 border-2 rounded-md overflow-hidden">
                         <img src={"/images/race-game.png"} style={{ objectFit:"cover", width:"100%", height:"100%" }} />
                       </div>
@@ -207,7 +208,7 @@ export default function Home() {
                         <div className="text-gray-300 text-sm">We will learn how to share the prizes in games with multiple winners, and how to set the percentage each one takes.</div>
                       </div>
                     </div>
-                    <div className="lg:col-span-2">
+                    <div className="lg:col-span-2 hover:scale-95 transition-all" onClick={()=>setShowUnderConstruction(true)}>
                       <div className="relative w-full h-52 bg-gray-300 border-gray-300 border-2 rounded-md overflow-hidden">
                         <img src={"/images/items-collection.png"} style={{ objectFit:"cover", width:"100%", height:"100%" }} />
                       </div>
@@ -234,7 +235,21 @@ export default function Home() {
         </div>
       </section>
 
-
+      
+      {
+        showUnderConstruction && (
+        <div onClick={()=>setShowUnderConstruction(false)} className="fixed top-0 bottom-0 right-0 left-0 bg-black bg-opacity-30 flex justify-center items-center">
+          <div className="bg-white w-[90%] max-w-md p-5 rounded-md shadow-md flex flex-col justify-center">
+              <div className="h-[150px] relative flex justify-center">
+                <img src={"/images/forky-under-construction.png"} style={{ objectFit:"cover", height:"100%" }} />
+              </div>
+              <div className="text-center text-2xl font-bold">Under construction</div>
+              <div className="text-center">We are currently working on this. Stay tunned!</div>
+              <div onClick={()=>setShowUnderConstruction(false)} className="mt-3 mx-auto rounded-md bg-purple-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 inline-block">Ok</div>
+          </div>
+        </div>
+        )
+      }
 
 
 
